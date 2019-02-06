@@ -31,17 +31,17 @@ security passwords min-length 8
 ```
 #### User EXEC Mode Password
 ```
-Router2>enable
-Router2#configure terminal
-Router2(config)#enable password mypassword
-Router2(config)#enable secret mysecretpassword
+Router2> enable
+Router2# configure terminal
+Router2(config)# enable password mypassword
+Router2(config)# enable secret mysecretpassword
 ```
 
 #### Privileged EXEC Mode Password
 ```
-Router2>enable
-Router2#configure terminal
-Router2(config)#enable password mypassword
+Router2> enable
+Router2# configure terminal
+Router2(config)# enable password mypassword
 ```
 #### Configure Passwords on the Line
 ##### There are four main types of TTY lines
@@ -61,19 +61,28 @@ Router2(config)#enable password mypassword
 
 1. From the privileged EXEC (or "enable") prompt, enter configuration mode and then switch to line configuration mode using the following commands. Notice that the prompt changes to reflect the current mode. 
 ```
-router#configure terminal
+router# configure terminal
 Enter configuration commands, one per line.  End with CNTL/Z.
-router(config)#line con 0
+router(config)# line con 0
 router(config-line)#
 ```
 2. Configure the password, and enable password checking at login.
 ```
-router(config-line)#password letmein
-router(config-line)#login
+router(config-line)# password letmein
+router(config-line)# login
 ```
 3. Exit configuration mode.
 ```
-router(config-line)#end
+router(config-line)# end
 router#
 %SYS-5-CONFIG_I: Configured from console by console
 ```
+#### Max Log In Attempts
+```
+switch# login block-for 3 attempts tries within 30
+```
+### Session Timeout
+```
+switch# terminal session-timeout 10
+```
+
