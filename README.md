@@ -1,10 +1,20 @@
 # Cisco Cheatsheet | Packet Tracer
 
+## Cisco IOS (Interface Operating System)
+
+### Interface
+
+- User EXEC Mode
+- Privileged EXEC Mode
+- Global Configuration Mode
+- ROM Monitor Mode
+- Setup Mode
+- More than 100 configuration modes and submodes.
 ## PC
 ### IP Configuration
---> IP
---> Subnet Mask
---> Default Gateway
+- IP
+- Subnet Mask
+- Default Gateway
 
 ## Router
 
