@@ -22,6 +22,16 @@
 
 ### Router, Switch Configuration
 
+### Show Running Configuration
+```
+router2# show running-configuration
+```
+
+### Save Running Configuration to Startup Configuration
+```
+router2# copy running-configuration startup-configuration
+```
+
 ### Hostname
 ```
 hostname this_is_the_name
@@ -54,6 +64,11 @@ switch# login block-for 3 attempts tries within 30
 #### Session Timeout
 ```
 switch# terminal session-timeout 10
+```
+
+#### Encrypting Passwords
+```
+service password-encryption
 ```
 
 #### Configure Passwords on the Line
@@ -90,7 +105,11 @@ router(config-line)# end
 router#
 %SYS-5-CONFIG_I: Configured from console by console
 ```
+
 ## SSH Connections
+
+1. Create domain name
+``` ip domain-name stya_lab ```
 
 ### Local User
 ### No Telnet
